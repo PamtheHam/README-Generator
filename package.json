@@ -1,0 +1,22 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "In this project, I worked to develop a process that makes creating a README.md more quick and simple for the user. In order to demonstrate the application, I created a walk-through video on Screencastify where I show the user how to utilize the application to produce a README.md with the user's input using the inquirer package from NPM.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PamtheHam/README-Generator.git"
+  },
+  "author": "Pamela Hammond",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PamtheHam/README-Generator/issues"
+  },
+  "homepage": "https://github.com/PamtheHam/README-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  }
+}
