@@ -9,9 +9,12 @@
 
 const fs = require('fs');
 const inquirer = require('inquirer');
+const util = require('util');
+
+const writeFileAsync = util.promisify(fs.writeFile);
 
 const generateQuestions = () => {
-    inquirer.prompt([
+   return inquirer.prompt([
         {
         type: 'input',
         name: 'title',
@@ -55,7 +58,7 @@ const generateQuestions = () => {
     ]);
   };
 
-const generateReadMe = (answers) => {
+const generateReadMe = (answers) => 
 
 `${answers.title}
 
@@ -70,6 +73,7 @@ ${answers.description}
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Contact Information](#contact-information)
 
 
 ## Installation
@@ -82,14 +86,16 @@ ${answers.usage}
 ${answers.credits}
 
 ## License
-${answers.license}`
+${answers.license}
 
-}
+## Contact Information
+${answers.email}
+${answers.github}`
 
   
   const init = () => {
     generateQuestions()
-      .then((answers) => fs.writeFile('README.md', generateReadMe(answers)))
+      .then((answers) => writeFileAsync('README.md', generateReadMe(answers)))
       .then(() => console.log('Successfully wrote to README.md!'))
       .catch((err) => console.error(err));
   };
