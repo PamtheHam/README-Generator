@@ -78,6 +78,7 @@ ${answers.description}
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
+- [Tests](#tests)
 - [License](#license)
 - [Contact Information](#contact-information)
 
@@ -91,13 +92,14 @@ ${answers.usage}
 ## Credits
 ${answers.credits}
 
+## Tests
+${answers.tests}
+
 ## License
 Code released under the ${answers.license}
 
 ## Contact Information
-If you have any questions about this project, please contact me here:
-${answers.email}
-${answers.github}`
+If you have any questions about this project, please email me here: ${answers.email}. My GitHub username is: ${answers.github}`
 
   
   const init = () => {
