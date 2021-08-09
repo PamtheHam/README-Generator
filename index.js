@@ -18,42 +18,48 @@ const generateQuestions = () => {
         {
         type: 'input',
         name: 'title',
-        message: 'Please enter the title of your project.',
+        message: 'What is the title of your project.?',
           },
       {
         type: 'input',
         name: 'description',
-        message: 'Please enter a description for your project.',
+        message: 'How would you describe your project to the user?',
       },
       {
         type: 'input',
         name: 'installation',
-        message: 'Please enter a step-by-step instruction on how to install your project.',
+        message: 'How can the user install your project?',
       },
       {
         type: 'input',
         name: 'usage',
-        message: 'Provide instructions or examples for the use of your project.',
+        message: 'What instructions would you provide to the user of this project?',
+      },
+      {
+        type: 'list',
+        name: 'license',
+        choices: ['GNU GPLv2','GNU GPLv3','Apache License 2.0','MIT License','ISC License', 'No License'],
+        message: 'Are there any licenses associated with this project?',
       },
       {
         type: 'input',
         name: 'credits',
-        message: 'Please provide contact information as well as GitHub profiles on any collaborators for this project.',
+        message: 'Are there any collaborators on this project? Please provide contact information as well as GitHub profiles on any collaborators for this project.',
       },
       {
         type: 'input',
-        name: 'license',
-        message: 'Please detail any licenses that you have for this project and their description.',
+        name: 'tests',
+        message: 'Did you write any tests for this application? Please detail them here.',
       },
       {
         type: 'input',
         name: 'email',
-        message: 'Please enter your email address.',
+        message: 'What is your email address.',
       },
       {
         type: 'input',
         name: 'github',
-        message: 'Please enter your GitHub username.',
+        message: 'What is your GitHub username.',
       },
     ]);
   };
@@ -86,9 +92,10 @@ ${answers.usage}
 ${answers.credits}
 
 ## License
-${answers.license}
+Code released under the ${answers.license}
 
 ## Contact Information
+If you have any questions about this project, please contact me here:
 ${answers.email}
 ${answers.github}`
 
@@ -96,7 +103,7 @@ ${answers.github}`
   const init = () => {
     generateQuestions()
       .then((answers) => writeFileAsync('README.md', generateReadMe(answers)))
-      .then(() => console.log('Successfully wrote to README.md!'))
+      .then(() => console.log('A README.md file was successfully created with your input!'))
       .catch((err) => console.error(err));
   };
   
