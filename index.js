@@ -23,7 +23,7 @@ const generateQuestions = () => {
       {
         type: 'input',
         name: 'description',
-        message: 'How would you describe your project to the user?',
+        message: 'How would you describe your project to the user? Please also include the deployed url for this project.',
       },
       {
         type: 'input',
