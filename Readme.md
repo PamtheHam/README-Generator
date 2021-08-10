@@ -15,7 +15,7 @@ Here is a link to the walk-through video: https://drive.google.com/file/d/1ELzVc
 - [License](#license)
 - [Contact Information](#contact-information)
 
-![Screenshot of sample README.md]()
+![Screenshot of sample README.md](./Sample/Sample-README-Screenshot.png)
 
 ## Installation
 1. Clone this repository into a file on your computer into whichever folder you prefer
